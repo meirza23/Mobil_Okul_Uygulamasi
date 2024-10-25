@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'OgrenciGirisSayfasi.dart'; // Öğrenci giriş sayfasını import edin
-import 'OgretmenGirisSayfasi.dart'; // Öğretmen giriş sayfasını import edin
-import 'SekreterGirisSayfasi.dart'; // Sekreter giriş sayfasını import edin
+import 'ogrenci_giris_sayfasi.dart'; // Öğrenci giriş sayfasını import edin
+import 'ogretmen_giris_sayfasi.dart'; // Öğretmen giriş sayfasını import edin
+import 'sekreter_giris_sayfasi.dart'; // Sekreter giriş sayfasını import edin
 
 void main() {
   runApp(MyApp());

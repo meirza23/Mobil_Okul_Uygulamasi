@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'OgretmenSayfasi.dart'; // OgretmenSayfasi'na yönlendirme için import ettik
+import 'sekreter_sayfasi.dart'; // SekreterSayfasi'na yönlendirme için import ettik
 
-class OgretmenGirisSayfasi extends StatefulWidget {
+class SekreterGirisSayfasi extends StatefulWidget {
   @override
-  _OgretmenGirisSayfasiState createState() => _OgretmenGirisSayfasiState();
+  _SekreterGirisSayfasiState createState() => _SekreterGirisSayfasiState();
 }
 
-class _OgretmenGirisSayfasiState extends State<OgretmenGirisSayfasi> {
+class _SekreterGirisSayfasiState extends State<SekreterGirisSayfasi> {
   final TextEditingController _kullaniciAdController = TextEditingController();
   final TextEditingController _sifreController = TextEditingController();
   String _hataMesaji = ''; // Hata mesajı için değişken
@@ -16,11 +16,11 @@ class _OgretmenGirisSayfasiState extends State<OgretmenGirisSayfasi> {
     String sifre = _sifreController.text;
 
     // Kullanıcı adı ve şifre kontrolü
-    if (kullaniciAdi == 'ogretmen123' && sifre == '123') {
-      // Bilgiler doğru ise OgretmenSayfasi'na yönlendir
+    if (kullaniciAdi == 'sekreter123' && sifre == '123') {
+      // Bilgiler doğru ise SekreterSayfasi'na yönlendir
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => OgretmenSayfasi()),
+        MaterialPageRoute(builder: (context) => SekreterSayfasi()),
       );
     } else {
       // Hata mesajı göster
@@ -56,7 +56,7 @@ class _OgretmenGirisSayfasiState extends State<OgretmenGirisSayfasi> {
                 const SizedBox(height: 20),
                 // Sayfa Başlığı
                 const Text(
-                  'Öğretmen Giriş Sayfası',
+                  'Sekreter Giriş Sayfası',
                   style: TextStyle(
                     fontFamily: 'Kavivanar',
                     fontSize: 24,
