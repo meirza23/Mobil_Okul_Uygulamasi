@@ -20,7 +20,7 @@ class _OgrenciGirisSayfasiState extends State<OgrenciGirisSayfasi> {
       // Bilgiler doğru ise OgrenciSayfasi'na yönlendir
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => OgrenciSayfasi()),
+        MaterialPageRoute(builder: (context) => const OgrenciSayfasi()),
       );
     } else {
       // Hata mesajı göster
@@ -48,14 +48,14 @@ class _OgrenciGirisSayfasiState extends State<OgrenciGirisSayfasi> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // CircleAvatar
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 90,
                   backgroundImage:
                       AssetImage('assets/images/istanbul-medeniyet.jpg'),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 // Sayfa Başlığı
-                Text(
+                const Text(
                   'Öğrenci Giriş Sayfası',
                   style: TextStyle(
                     fontFamily: 'Kavivanar',
@@ -63,7 +63,7 @@ class _OgrenciGirisSayfasiState extends State<OgrenciGirisSayfasi> {
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 // Kullanıcı adı alanı
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -73,11 +73,11 @@ class _OgrenciGirisSayfasiState extends State<OgrenciGirisSayfasi> {
                       labelText: 'Kullanıcı Adı',
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.7),
-                      border: OutlineInputBorder(),
+                      border: const OutlineInputBorder(),
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 // Şifre alanı
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -88,34 +88,34 @@ class _OgrenciGirisSayfasiState extends State<OgrenciGirisSayfasi> {
                       labelText: 'Şifre',
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.7),
-                      border: OutlineInputBorder(),
+                      border: const OutlineInputBorder(),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 // Hata mesajı
                 if (_hataMesaji.isNotEmpty)
                   Container(
-                    padding: EdgeInsets.all(16), // İçerideki boşluk
-                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.all(16), // İçerideki boşluk
+                    margin: const EdgeInsets.symmetric(horizontal: 20),
                     decoration: BoxDecoration(
                       color: Colors.red.withOpacity(0.9), // Arka plan rengi
                       borderRadius: BorderRadius.circular(8), // Kenar yuvarlama
                     ),
                     child: Text(
                       _hataMesaji,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 16, // Yazı boyutu
                       ),
                       textAlign: TextAlign.center, // Metin ortalama
                     ),
                   ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 // Giriş butonu
                 ElevatedButton(
                   onPressed: _girisYap,
-                  child: Text('Giriş Yap'),
+                  child: const Text('Giriş Yap'),
                 ),
               ],
             ),

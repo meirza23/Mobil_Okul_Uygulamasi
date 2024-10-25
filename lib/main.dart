@@ -35,7 +35,7 @@ class AnaSayfa extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Şeffaflaştırılmış CircleAvatar
-                Opacity(
+                const Opacity(
                   opacity: 0.7,
                   child: CircleAvatar(
                     radius: 90,
@@ -43,7 +43,7 @@ class AnaSayfa extends StatelessWidget {
                         AssetImage('assets/images/istanbul-medeniyet.jpg'),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 // Öğrenci Girişi Butonu
                 Opacity(
                   opacity: 0.8,
@@ -59,7 +59,7 @@ class AnaSayfa extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         'Öğrenci Girişi',
                         style: TextStyle(
                           fontFamily: 'Kavivanar',
@@ -69,7 +69,7 @@ class AnaSayfa extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 // Öğretmen Girişi Butonu
                 Opacity(
                   opacity: 0.8,
@@ -85,7 +85,7 @@ class AnaSayfa extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         'Öğretmen Girişi',
                         style: TextStyle(
                           fontFamily: 'Kavivanar',
@@ -95,7 +95,7 @@ class AnaSayfa extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 // Sekreter Girişi Butonu
                 Opacity(
                   opacity: 0.8,
@@ -111,7 +111,7 @@ class AnaSayfa extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         'Sekreter Girişi',
                         style: TextStyle(
                           fontFamily: 'Kavivanar',

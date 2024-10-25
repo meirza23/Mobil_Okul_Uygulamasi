@@ -5,12 +5,12 @@ class SekreterSayfasi extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sekreter Sayfası'),
+        title: const Text('Sekreter Sayfası'),
         backgroundColor: Colors.cyan[600], // AppBar arka plan rengi
         actions: [
           // Yarı şeffaf daire şeklinde logo ekleme
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0),
+          const Padding(
+            padding: EdgeInsets.only(right: 16.0),
             child: Opacity(
               opacity: 0.5, // Şeffaflık seviyesi
               child: CircleAvatar(
@@ -32,7 +32,7 @@ class SekreterSayfasi extends StatelessWidget {
             height: double.infinity,
           ),
           // Ortada metin
-          Center(
+          const Center(
             child: Text(
               'Sekreter Giriş Başarılı!',
               style: TextStyle(

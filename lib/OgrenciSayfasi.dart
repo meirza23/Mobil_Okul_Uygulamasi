@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 class OgrenciSayfasi extends StatelessWidget {
+  const OgrenciSayfasi({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Öğrenci Sayfası'),
+        title: const Text('Öğrenci Sayfası'),
         backgroundColor: Colors.cyan[600], // AppBar arka plan rengi
-        actions: [
+        actions: const [
           // Yarı şeffaf daire şeklinde logo ekleme
           Padding(
-            padding: const EdgeInsets.only(right: 16.0),
+            padding: EdgeInsets.only(right: 16.0),
             child: Opacity(
               opacity: 0.5, // Şeffaflık seviyesi
               child: CircleAvatar(
@@ -32,7 +34,7 @@ class OgrenciSayfasi extends StatelessWidget {
             height: double.infinity,
           ),
           // Ortada metin
-          Center(
+          const Center(
             child: Text(
               'Öğrenci Giriş Başarılı!',
               style: TextStyle(

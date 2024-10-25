@@ -5,12 +5,12 @@ class OgretmenSayfasi extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Öğretmen Sayfası'),
+        title: const Text('Öğretmen Sayfası'),
         backgroundColor: Colors.cyan[600], // AppBar arka plan rengi
         actions: [
           // Yarı şeffaf daire şeklinde logo ekleme
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0),
+          const Padding(
+            padding: EdgeInsets.only(right: 16.0),
             child: Opacity(
               opacity: 0.5, // Şeffaflık seviyesi
               child: CircleAvatar(
@@ -32,7 +32,7 @@ class OgretmenSayfasi extends StatelessWidget {
             height: double.infinity,
           ),
           // Ortada metin
-          Center(
+          const Center(
             child: Text(
               'Öğretmen Giriş Başarılı!',
               style: TextStyle(
