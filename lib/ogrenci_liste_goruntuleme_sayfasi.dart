@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 class OgrenciListeGoruntulemeSayfasi extends StatelessWidget {
   final List<String> gorevler;
 
-  const OgrenciListeGoruntulemeSayfasi({Key? key, required this.gorevler})
-      : super(key: key);
+  const OgrenciListeGoruntulemeSayfasi({super.key, required this.gorevler});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +16,14 @@ class OgrenciListeGoruntulemeSayfasi extends StatelessWidget {
             fontFamily: 'Kavivanar', // Fontu Kavivanar olarak ayarlıyoruz
           ),
         ),
-        backgroundColor: Color.fromRGBO(12, 19, 38, 1), // Arka plan rengi
+        backgroundColor: const Color.fromRGBO(12, 19, 38, 1), // Arka plan rengi
         elevation: 0, // Gölgelendirmeyi kaldır
         iconTheme: const IconThemeData(
           color: Colors.white, // Geri dön butonunun rengi beyaz
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image:
                 AssetImage('assets/images/wallpaper3.jpg'), // Arka plan resmi
@@ -44,7 +43,7 @@ class OgrenciListeGoruntulemeSayfasi extends StatelessWidget {
               ),
               child: Text(
                 gorevler[index],
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.white, fontFamily: 'Lato' // Siyah yakın renk
                     ),
               ),

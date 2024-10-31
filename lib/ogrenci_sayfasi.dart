@@ -37,7 +37,6 @@ class OgrenciSayfasi extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Liste Oluştur Butonu
                 SizedBox(
                   width: 150,
                   height: 150,
@@ -55,24 +54,22 @@ class OgrenciSayfasi extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       padding: EdgeInsets.zero,
-                      backgroundColor: Colors.red[400]
-                          ?.withOpacity(0.7), // Buton rengi değiştirildi
+                      backgroundColor: Colors.red[400]?.withOpacity(0.7),
                     ),
                     child: const Opacity(
-                      opacity: 0.85, // Butonun opasitesi
+                      opacity: 0.85,
                       child: Text(
                         'Liste Oluştur',
                         style: TextStyle(
-                          fontSize: 20, // Boyut 20 yapıldı
-                          fontFamily: 'Lato', // Lato fontunu kullan
-                          color: Colors.black, // Yazı rengi siyah yapıldı
+                          fontSize: 20,
+                          fontFamily: 'Lato',
+                          color: Colors.black,
                         ),
                       ),
                     ),
                   ),
                 ),
                 const SizedBox(width: 20),
-                // Liste Görüntüle Butonu
                 SizedBox(
                   width: 150,
                   height: 150,
@@ -93,17 +90,16 @@ class OgrenciSayfasi extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       padding: EdgeInsets.zero,
-                      backgroundColor: Colors.red[400]
-                          ?.withOpacity(0.7), // Buton rengi değiştirildi
+                      backgroundColor: Colors.red[400]?.withOpacity(0.7),
                     ),
                     child: const Opacity(
-                      opacity: 0.85, // Butonun opasitesi
+                      opacity: 0.85,
                       child: Text(
                         'Liste Görüntüle',
                         style: TextStyle(
-                          fontSize: 20, // Boyut 20 yapıldı
-                          fontFamily: 'Lato', // Lato fontunu kullan
-                          color: Colors.black, // Yazı rengi siyah yapıldı
+                          fontSize: 20,
+                          fontFamily: 'Lato',
+                          color: Colors.black,
                         ),
                       ),
                     ),

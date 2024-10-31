@@ -1,113 +1,104 @@
 import 'package:flutter/material.dart';
-import 'ogrenci_liste_olusturma_sayfasi.dart';
-import 'ogrenci_liste_goruntuleme_sayfasi.dart';
 
-class OgretmenSayfasi extends StatelessWidget {
+class OgretmenSayfasi extends StatefulWidget {
+  @override
+  _OgretmenSayfasiState createState() => _OgretmenSayfasiState();
+}
+
+class _OgretmenSayfasiState extends State<OgretmenSayfasi> {
+  final TextEditingController _vizeController = TextEditingController();
+  final TextEditingController _finalController = TextEditingController();
+  double? ortalama;
+
+  void _ortalamaHesapla() {
+    double vize = double.tryParse(_vizeController.text) ?? 0;
+    double finalNotu = double.tryParse(_finalController.text) ?? 0;
+    setState(() {
+      ortalama = (vize * 0.4) + (finalNotu * 0.6);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Öğretmen Sayfası'),
-        backgroundColor: Colors.cyan[600],
-        actions: [
-          const Padding(
-            padding: EdgeInsets.only(right: 16.0),
-            child: Opacity(
-              opacity: 0.5,
-              child: CircleAvatar(
-                radius: 20,
-                backgroundImage:
-                    AssetImage('assets/images/istanbul-medeniyet.jpg'),
+        title: const Text(
+          'Öğretmen Sayfası',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Kavivanar',
+          ),
+        ),
+        backgroundColor: const Color.fromRGBO(12, 19, 38, 1),
+        elevation: 0,
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ),
+      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/wallpaper3.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: _vizeController,
+              style: const TextStyle(color: Colors.white),
+              decoration: const InputDecoration(
+                labelText: 'Vize Notu',
+                labelStyle: TextStyle(color: Colors.white),
+              ),
+              keyboardType: TextInputType.number,
+            ),
+            TextField(
+              controller: _finalController,
+              style: const TextStyle(color: Colors.white),
+              decoration: const InputDecoration(
+                labelText: 'Final Notu',
+                labelStyle: TextStyle(color: Colors.white),
+              ),
+              keyboardType: TextInputType.number,
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 221, 23, 23),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              onPressed: _ortalamaHesapla,
+              child: const Text(
+                'Ortalama Hesapla',
+                style: TextStyle(color: Colors.white, fontFamily: 'Lato'),
               ),
             ),
-          ),
-        ],
-      ),
-      body: Stack(
-        children: [
-          Image.asset(
-            'assets/images/wallpaper2.jpg',
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
-          ),
-          // Sayfa içeriği
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  'Öğretmen Giriş Başarılı!',
-                  style: TextStyle(
-                    fontSize: 24,
+            const SizedBox(height: 20),
+            if (ortalama != null)
+              Container(
+                padding: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  color:
+                      const Color.fromARGB(255, 221, 23, 23).withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Text(
+                  'Ortalama: ${ortalama!.toStringAsFixed(2)}',
+                  style: const TextStyle(
                     color: Colors.white,
                     fontFamily: 'Lato',
+                    fontSize: 18,
                   ),
                 ),
-                const SizedBox(
-                    height: 30), // Metin ile butonlar arasında boşluk
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // Liste Oluştur Butonu
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                OgrenciListeOlusturmaSayfasi(),
-                          ),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15), // Kare buton
-                        ),
-                        padding: const EdgeInsets.all(20), // Büyütme
-                        backgroundColor:
-                            Colors.cyan.withOpacity(0.7), // Saydam yapma
-                        minimumSize: const Size(150, 150), // Minimum boyut
-                      ),
-                      child: const Text(
-                        'Liste Oluştur',
-                        style: TextStyle(fontSize: 18), // Font boyutunu artır
-                      ),
-                    ),
-                    const SizedBox(width: 20), // Butonlar arasında boşluk
-                    // Liste Görüntüle Butonu
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                OgrenciListeGoruntulemeSayfasi(
-                              gorevler: [], // Başlangıçta boş liste
-                            ),
-                          ),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15), // Kare buton
-                        ),
-                        padding: const EdgeInsets.all(20), // Büyütme
-                        backgroundColor:
-                            Colors.cyan.withOpacity(0.7), // Saydam yapma
-                        minimumSize: const Size(150, 150), // Minimum boyut
-                      ),
-                      child: const Text(
-                        'Liste Görüntüle',
-                        style: TextStyle(fontSize: 18), // Font boyutunu artır
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ],
+              ),
+          ],
+        ),
       ),
     );
   }

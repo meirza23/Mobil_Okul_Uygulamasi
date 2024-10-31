@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'ogretmen_sayfasi.dart'; // OgretmenSayfasi'na yönlendirme için import ettik
+import 'ogretmen_sayfasi.dart';
 
 class OgretmenGirisSayfasi extends StatefulWidget {
   @override
@@ -9,21 +9,18 @@ class OgretmenGirisSayfasi extends StatefulWidget {
 class _OgretmenGirisSayfasiState extends State<OgretmenGirisSayfasi> {
   final TextEditingController _kullaniciAdController = TextEditingController();
   final TextEditingController _sifreController = TextEditingController();
-  String _hataMesaji = ''; // Hata mesajı için değişken
+  String _hataMesaji = '';
 
   void _girisYap() {
     String kullaniciAdi = _kullaniciAdController.text;
     String sifre = _sifreController.text;
 
-    // Kullanıcı adı ve şifre kontrolü
     if (kullaniciAdi == 'ogretmen123' && sifre == '123') {
-      // Bilgiler doğru ise OgretmenSayfasi'na yönlendir
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => OgretmenSayfasi()),
       );
     } else {
-      // Hata mesajı göster
       setState(() {
         _hataMesaji = 'Kullanıcı adı veya şifre hatalı!';
       });
@@ -35,26 +32,22 @@ class _OgretmenGirisSayfasiState extends State<OgretmenGirisSayfasi> {
     return Scaffold(
       body: Stack(
         children: [
-          // Arka plan resmi
           Image.asset(
             'assets/images/wallpaper.jpg',
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
           ),
-          // İçerik
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // CircleAvatar
                 const CircleAvatar(
                   radius: 90,
                   backgroundImage:
                       AssetImage('assets/images/istanbul-medeniyet.jpg'),
                 ),
                 const SizedBox(height: 20),
-                // Sayfa Başlığı
                 const Text(
                   'Öğretmen Giriş Sayfası',
                   style: TextStyle(
@@ -64,7 +57,6 @@ class _OgretmenGirisSayfasiState extends State<OgretmenGirisSayfasi> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                // Kullanıcı adı alanı
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TextField(
@@ -78,7 +70,6 @@ class _OgretmenGirisSayfasiState extends State<OgretmenGirisSayfasi> {
                   ),
                 ),
                 const SizedBox(height: 10),
-                // Şifre alanı
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TextField(
@@ -93,26 +84,24 @@ class _OgretmenGirisSayfasiState extends State<OgretmenGirisSayfasi> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                // Hata mesajı
                 if (_hataMesaji.isNotEmpty)
                   Container(
-                    padding: const EdgeInsets.all(16), // İçerideki boşluk
+                    padding: const EdgeInsets.all(16),
                     margin: const EdgeInsets.symmetric(horizontal: 20),
                     decoration: BoxDecoration(
-                      color: Colors.red.withOpacity(0.9), // Arka plan rengi
-                      borderRadius: BorderRadius.circular(8), // Kenar yuvarlama
+                      color: Colors.red.withOpacity(0.9),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
                       _hataMesaji,
                       style: const TextStyle(
                         color: Colors.white,
-                        fontSize: 16, // Yazı boyutu
+                        fontSize: 16,
                       ),
-                      textAlign: TextAlign.center, // Metin ortalama
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 const SizedBox(height: 20),
-                // Giriş butonu
                 ElevatedButton(
                   onPressed: _girisYap,
                   child: const Text('Giriş Yap'),
