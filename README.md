@@ -1,16 +1,30 @@
-# flutter_application_1
+Mobil Okul Uygulaması
 
-A new Flutter project.
+Bu mobil uygulama, öğrenci, öğretmen ve sekreterlerin okul işlemlerini yönetmelerini sağlar. Flutter ile geliştirilmiş olup kullanıcı dostu bir arayüze sahiptir.
+Özellikler
+Giriş Ekranı
 
-## Getting Started
+    Öğrenci, Öğretmen, Sekreter Girişi: İlgili kullanıcı adı ve şifre ile giriş yapılır.
+        Öğrenci: Kullanıcı adı ogrenci123, şifre 123.
+        Öğretmen: Kullanıcı adı ogretmen123, şifre 123.
+        Sekreter: Kullanıcı adı sekreter123, şifre 123.
 
-This project is a starting point for a Flutter application.
+Yanlış bilgi girilirse hata mesajı gösterilir.
+Öğrenci Sayfası
 
-A few resources to get you started if this is your first Flutter project:
+    Liste Oluştur: Görevleri eklemek için.
+    Liste Görüntüle: Eklenen görevleri listeleme.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Öğretmen Sayfası
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    Not Girişi: Vize ve final notlarını girerek öğrencinin ortalamasını hesaplama.
+
+Sekreter Sayfası
+
+    Duyuru Oluştur ve Görüntüle: Duyuruları oluşturma ve görüntüleme işlemleri yapılır.
+
+Kurulum
+
+    Flutter Kurulumu: Flutter SDK’yı indir ve kur.
+    Bağımlılıkları Yükle: pub get komutu ile.
+    Uygulamayı Çalıştır: flutter run komutunu kullan.
