@@ -1,30 +1,30 @@
 Mobil Okul Uygulaması
 
-Bu mobil uygulama, öğrenci, öğretmen ve sekreterlerin okul işlemlerini yönetmelerini sağlar. Flutter ile geliştirilmiş olup kullanıcı dostu bir arayüze sahiptir.
+Bu uygulama, İstanbul Medeniyet Üniversitesi için öğrenci, öğretmen ve sekreterlerin işlemlerini kolaylaştırmak üzere geliştirilmiştir.
 Özellikler
 Giriş Ekranı
 
-    Öğrenci, Öğretmen, Sekreter Girişi: İlgili kullanıcı adı ve şifre ile giriş yapılır.
-        Öğrenci: Kullanıcı adı ogrenci123, şifre 123.
-        Öğretmen: Kullanıcı adı ogretmen123, şifre 123.
-        Sekreter: Kullanıcı adı sekreter123, şifre 123.
+    Öğrenci, Öğretmen, Sekreter Girişi:
+        Öğrenci: ogrenci123 / 123
+        Öğretmen: ogretmen123 / 123
+        Sekreter: sekreter123 / 123
 
-Yanlış bilgi girilirse hata mesajı gösterilir.
+Hatalı girişlerde uyarı mesajı gösterilir.
 Öğrenci Sayfası
 
-    Liste Oluştur: Görevleri eklemek için.
-    Liste Görüntüle: Eklenen görevleri listeleme.
+    Liste Oluşturma: Görev ekleme.
+    Liste Görüntüleme: Eklenen görevleri listeleme.
 
 Öğretmen Sayfası
 
-    Not Girişi: Vize ve final notlarını girerek öğrencinin ortalamasını hesaplama.
+    Not Girişi: Vize ve final notlarını girip ortalama hesaplama.
 
 Sekreter Sayfası
 
-    Duyuru Oluştur ve Görüntüle: Duyuruları oluşturma ve görüntüleme işlemleri yapılır.
+    Duyuru Yönetimi: Duyuru oluşturma ve görüntüleme.
 
 Kurulum
 
-    Flutter Kurulumu: Flutter SDK’yı indir ve kur.
-    Bağımlılıkları Yükle: pub get komutu ile.
-    Uygulamayı Çalıştır: flutter run komutunu kullan.
+    Flutter Kurulumu: Flutter SDK’yı indirip kurun.
+    Bağımlılıkları Yükleme: flutter pub get
+    Uygulamayı Çalıştırma: flutter run
