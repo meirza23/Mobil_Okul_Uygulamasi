@@ -1,16 +1,30 @@
-# flutter_application_1
+Mobil Okul Uygulaması
 
-A new Flutter project.
+Bu uygulama, İstanbul Medeniyet Üniversitesi için öğrenci, öğretmen ve sekreterlerin işlemlerini kolaylaştırmak üzere geliştirilmiştir.
+Özellikler
+Giriş Ekranı
 
-## Getting Started
+    Öğrenci, Öğretmen, Sekreter Girişi:
+        Öğrenci: ogrenci123 / 123
+        Öğretmen: ogretmen123 / 123
+        Sekreter: sekreter123 / 123
 
-This project is a starting point for a Flutter application.
+Hatalı girişlerde uyarı mesajı gösterilir.
+Öğrenci Sayfası
 
-A few resources to get you started if this is your first Flutter project:
+    Liste Oluşturma: Görev ekleme.
+    Liste Görüntüleme: Eklenen görevleri listeleme.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Öğretmen Sayfası
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    Not Girişi: Vize ve final notlarını girip ortalama hesaplama.
+
+Sekreter Sayfası
+
+    Duyuru Yönetimi: Duyuru oluşturma ve görüntüleme.
+
+Kurulum
+
+    Flutter Kurulumu: Flutter SDK’yı indirip kurun.
+    Bağımlılıkları Yükleme: flutter pub get
+    Uygulamayı Çalıştırma: flutter run
